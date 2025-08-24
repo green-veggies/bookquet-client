@@ -14,7 +14,7 @@ interface Book {
   createdAt: string;
 }
 
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = 'https://bookquet-server.onrender.com/api';
 
 export default function HomePage() {
   const [books, setBooks] = useState<Book[]>([]);
@@ -62,7 +62,6 @@ export default function HomePage() {
       setBooks(prevBooks => [addedBook, ...prevBooks]);
     } catch (err) {
       console.error('Error adding book:', err);
-      // You might want to show an error toast here
     }
   };
 
